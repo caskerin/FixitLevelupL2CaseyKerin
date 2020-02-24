@@ -1,0 +1,26 @@
+//Deciding which message to display and if it will work
+
+let mainMessage = "NE" && stateTemp < 32
+switch (true) {
+case stateAbb == "NE" && stateTemp < 32 :
+  alert(messages[0])
+  break;
+  
+case stateAbb == "NE" && stateTemp > 32 && stateTemp < 50 :
+  alert(messages[1])
+  break;
+  
+case stateAbb == "FL" && stateTemp > 32 && stateTemp < 50 :
+  alert(messages[2])
+  break;
+  
+case stateAbb == "FL" && stateTemp > 50 && stateTemp < 70 :
+  alert(messages[3])
+  break;
+default:
+    alert("You entered too little information or it was inncorrect")
+    break;
+  }
+  
+  //Each section checks if the information corresponds and if it is in the same way then it displays the messgage according to the info
+  
