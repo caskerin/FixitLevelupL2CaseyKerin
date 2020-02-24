@@ -1,0 +1,21 @@
+//This asks the question and has the messages in array
+
+let firstName = prompt("Enter your first name:") 
+let stateAbb = prompt("Enter the abbreviation for you home state:")  
+let stateTemp = Number(prompt("Enter the temp. in Fahrenheit:")) 
+let messages = ["wear a warm coat, hat, scarf and gloves.", "wear a warm coat but you won't need a hat, scarf or gloves.", "wear A less heavy coat .", "wear s light jacket and smile!"]
+//This capializes when needed
+let stateCapital = stateAbb.toUpperCase()
+let nameCapital = firstName.charAt(0).toUpperCase()+firstName.slice(1)
+
+//This gives the appropriate message base on what is put in
+
+if (stateAbb == "FL" && stateTemp > 32 && stateTemp < 50) {
+  alert(`${nameCapital}, ${messages[2]}`)
+} else if (stateAbb == "FL" && stateTemp > 50 && stateTemp < 70) {
+  alert(`${nameCapital}, ${messages[3]}`)
+} else if (stateAbb == "NE" && stateTemp < 32) {
+  alert(`${nameCapital}, ${messages[0]}`)
+} else if (stateAbb == "NE" && stateTemp > 32 && stateTemp < 50) {
+  alert(`${nameCapital}, ${messages[1]}`)
+}
